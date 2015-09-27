@@ -1,5 +1,6 @@
 jQuery(document).ready(function(){
 	requestImage(getRandomDate());
+	jQuery('#another-btn').click(function(){ requestImage(getRandomDate()); });
 });
 
 function getRandomDate() {

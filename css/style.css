@@ -17,6 +17,10 @@ body {
   align-items: center;
 }
 
+#another-btn {
+  margin-bottom: 1em;
+}
+
 .picture img {
   max-width: 100%;
 }
