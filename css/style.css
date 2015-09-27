@@ -5,8 +5,8 @@
   height: 100%;
   z-index: -1;
   display: block;
-  -webkit-filter: blur(50px);
-  -webkit-filter: opacity(25%);
+  -webkit-filter: blur(10px) opacity(25%);
+  filter: blur(100px) opacity(25%);
   background-size: cover;
 }
 
@@ -26,5 +26,6 @@ body {
 }
 
 .explanation {
-  max-width: 80%;
+  max-width: 60em;
+  margin: 0 5%;
 }
