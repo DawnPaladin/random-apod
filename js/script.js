@@ -1,5 +1,9 @@
+jQuery(document).ready(function(){
+	requestImage(getRandomDate());
+});
+
 function getRandomDate() {
-	var start = new Date("June 20, 1995").getTime();
+	var start = new Date("June 16, 1996").getTime();
 	var today = new Date().getTime();
 	return new Date(start + Math.random() * (today - start));
 }
@@ -18,7 +22,8 @@ function requestImage(dateObj) {
 }
 
 function setImage(json) {
-	console.log(JSON.stringify(json));
-	console.log(json.url);
+	console.dir(json);
 	jQuery('.picture img').attr('src', json.url);
+	var backgroundImage = 'url('+json.url+')';
+	jQuery('.blurred-bg').css('background-image', backgroundImage);
 }
