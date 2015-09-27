@@ -23,7 +23,15 @@ function requestImage(dateObj) {
 
 function setImage(json) {
 	console.dir(json);
-	jQuery('.picture img').attr('src', json.url);
-	var backgroundImage = 'url('+json.url+')';
-	jQuery('.blurred-bg').css('background-image', backgroundImage);
+	if (json.error) {
+		console.error(json.error);
+		jQuery('.title').text(json.error);
+		requestImage(getRandomDate());
+	} else {
+		jQuery('.picture img').attr('src', json.url);
+		var backgroundImage = 'url('+json.url+')';
+		jQuery('.blurred-bg').css('background-image', backgroundImage);
+		jQuery('.title').text(json.title);
+		jQuery('.explanation').text(json.explanation);
+	}
 }

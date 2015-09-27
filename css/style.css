@@ -16,3 +16,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.picture img {
+  max-width: 100%;
+}
+
+.explanation {
+  max-width: 80%;
+}
